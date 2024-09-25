@@ -30,6 +30,10 @@ test "should save student with valid attributes" do
 end
 
 
+  it "should not allow duplicate school_email" do
+    student1 = Student.create!(school_email: 'test@example.com')
+    student2 = Student.new(school_email: 'test@example.com')
+
 
 
 
