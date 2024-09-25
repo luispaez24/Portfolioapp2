@@ -24,4 +24,15 @@
     <%= student.graduation_date %>
   </p>
 
+<p>
+    <% if @student.avatar.attached? %>
+      <%= image_tag @student.avatar, alt: "Profile Picture" %>
+    <% else %>
+      <%= image_tag 'default-avatar.png', alt: "Default Profile Picture" %>
+    <% end %>
+  </p>
+
+  <%= link_to 'Edit', edit_student_path(@student) %> |
+  <%= link_to 'Back', students_path %>
+
 </div>
