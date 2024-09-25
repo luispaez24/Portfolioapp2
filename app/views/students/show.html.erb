@@ -7,4 +7,18 @@
   <%= link_to "Back to students", students_path %>
 
   <%= button_to "Destroy this student", @student, method: :delete %>
+
+
+
+
+<p>
+  <% if @student.avatar.attached? %>
+    <%= image_tag @student.avatar, alt: "Profile Picture" %>
+  <% else %>
+    <%= image_tag 'default-avatar.png', alt: "Default Profile Picture" %>
+  <% end %>
+</p>
+
+
+
 </div>
